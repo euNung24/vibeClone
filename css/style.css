@@ -215,6 +215,7 @@ button i span {
 
 .head.item_img img {
   width: 100%;
+  object-fit: cover;
 }
 
 .head:hover .music_btns {
@@ -503,6 +504,7 @@ button i span {
 
   .header {
     padding-top: 10px;
+    padding-right: 0;
     position: absolute;
     width: 250px;
     height: calc(100vh - 60px);

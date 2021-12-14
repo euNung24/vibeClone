@@ -1,425 +1,543 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VIBE Clone</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
-<body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header_wrapper">
-        <div class="logo">
-          <a href="">NAVER <span>VIBE</span></a> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIBE Clone</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header_wrapper">
+          <div class="logo">
+            <a href="">NAVER <span>VIBE</span></a>
+          </div>
+          <div class="menu_button">
+            <button type="button">
+              <i class="fas fa-search"><span>Search</span></i>
+            </button>
+            <button type="button" class="menu_toggle">
+              <i class="fas fa-bars"><span>Menu Button</span></i>
+            </button>
+          </div>
         </div>
-        <div class="menu_button">
-          <button type="button"><i class="fas fa-search"><span>Search</span></i></button>
-          <button type="button" class="menu_toggle"><i class="fas fa-bars"><span>Menu Button</span></i></button>
+        <div class="navigation">
+          <button type="button" class="close_btn">
+            <i class="fas fa-times"><span>닫기</span></i>
+          </button>
+          <a href="" class="login">
+            <img src="http://placehold.it/50x50" alt="로그인 이미지" />
+            <span>로그인</span>
+          </a>
+          <label for="search" class="util_hide">검색</label>
+          <input type="search" placeholder="VIBE 검색" id="search" />
+          <ul class="gnb">
+            <li>
+              <a href=""><i class="fas fa-home"></i>투데이</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-trophy"></i>차트</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-star-of-david"></i>최신앨범</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-compact-disc"></i>DJ 스테이션</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-newspaper"></i>VIBE MAG</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-calendar-week"></i>이달의 노래</a>
+            </li>
+          </ul>
+          <ul class="vibe_promotion">
+            <li><a href="">#내돈내듣</a></li>
+            <li><a href="">ONSTAGE</a></li>
+          </ul>
+          <ul class="menu_notice">
+            <li><a href="">서비스 소개</a></li>
+            <li><a href="">멤버쉽 구독</a></li>
+            <li><a href="">공지사항</a></li>
+            <li><a href="">커밍쑨 VIBE</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="navigation">
-        <button type="button" class="close_btn"><i class="fas fa-times"><span>닫기</span></i></button>
-        <a href="" class="login">
-          <img src="http://placehold.it/50x50" alt="로그인 이미지">
-          <span>로그인</span>
-        </a>
-        <input type="search" placeholder="VIBE 검색">
-        <ul class="gnb">
-          <li><a href=""><i class="fas fa-home"></i>투데이</a></li>
-          <li><a href=""><i class="fas fa-trophy"></i>차트</a></li>
-          <li><a href=""><i class="fas fa-star-of-david"></i>최신앨범</a></li>
-          <li><a href=""><i class="fas fa-compact-disc"></i>DJ 스테이션</a></li>
-          <li><a href=""><i class="fas fa-newspaper"></i>VIBE MAG</a></li>
-          <li><a href=""><i class="fas fa-calendar-week"></i>이달의 노래</a></li>
-        </ul>
-        <ul class="vibe_promotion">
-          <li><a href="">#내돈내듣</a></li>
-          <li><a href="">ONSTAGE</a></li>
-        </ul>
-        <ul class="menu_notice">
-          <li><a href="">서비스 소개</a></li>
-          <li><a href="">멤버쉽 구독</a></li>
-          <li><a href="">공지사항</a></li>
-          <li><a href="">커밍쑨 VIBE</a></li>
-        </ul>
-      </div>
-      <button type="button" class="desktop_btn toggle">데스크톱앱 설치</button>
-    </header>
-    <section class="today">
-      <div class="head item_img">
-        <a href="#">
-          <img src="https://placeimg.com/200/100/any" alt="">
+        <button type="button" class="desktop_btn toggle">
+          데스크톱앱 설치
+        </button>
+      </header>
+      <section class="today">
+        <h2 class="util-hide">투데이</h2>
+        <div class="head item_img">
+          <a href="#">
+            <img src="https://placeimg.com/200/100/any" alt="" />
+          </a>
           <div class="music_btns">
-            <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-            <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
+            <button type="button" class="play_btn">
+              <i class="fas fa-play-circle"><span>재생하기</span></i>
+            </button>
+            <button type="button" class="plus_btn">
+              <i class="far fa-ellipsis-h"><span>더보기</span></i>
+            </button>
           </div>
           <div class="head_info">
             <span class="genre">GENRE</span>
             <p>New Release #70: 에드시런, 엘튼 존</p>
-            <p class="full">크리스마스 싱글을 발표한 에드 시런과 엘튼 존, 새 앨범을 발표한 포레스텔라 조민규와 아이들...</p>
+            <p class="full">
+              크리스마스 싱글을 발표한 에드 시런과 엘튼 존, 새 앨범을 발표한
+              포레스텔라 조민규와 아이들...
+            </p>
             <div class="head_vibeMag full">
               <span>VIBE MAG</span>
               <span>2021.12.06</span>
             </div>
           </div>
-        </a>
-      </div>
-      <article class="magazine">
-        <h2><a href="#">매거진</a></h2>
-        <ul class="magazine_list">
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="http://placehold.it/320x100" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">1415의 시즌2</a>
-              </figcaption>
-            </figure>
-            <span>2021.12.08</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><a href=""><img src="https://placeimg.com/200/100/any" alt=""></a></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">New Release #70 : 에드시런, 엘튼 존</a>
-              </figcaption>
-            </figure>
-            <span>2021.12.06</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  Billboard HOT 100 : 
-                  요정과 디바의 차트 고지전
-                </a>
-              </figcaption>
-            </figure>
-            <span>2021.12.02</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  장우혁, 
-                  변화와 불변
-                </a>
-              </figcaption>
-            </figure>
-            <span>2021.12.01</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  Billboard HOT 100 : 
-                  요정과 디바의 차트 고지전
-                </a>
-              </figcaption>
-            </figure>
-            <span>2021.11.26</span>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h2>NEWS</h2>
-        <ul class="news_list">
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  임한별이 단독 콘서트 '크리스마스 시네마'를 개최합니다
-                </a>
-              </figcaption>
-            </figure>
-            </a>
-            <a href="" class="news">관련 뉴스 보기</a>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  에스파의 ’Savage’가 빌보드 200에 재진입 하였습니다
-                </a>
-              </figcaption>
-            </figure>
-            </a>
-            <a href="" class="news">관련 뉴스 보기</a>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  아이브의 ‘ELEVEN’이 빌보드 월드 디지털 송 차트에서 12위를 차지하였습니다관련 플레이리스트 보기
-                </a>
-              </figcaption>
-            </figure>
-            </a>
-            <a href="" class="news">관련 뉴스 보기</a>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  세븐틴이 ‘MTV 푸시’ 캠페인 12월의 아티스트로 선정되었습니다
-                </a>
-              </figcaption>
-            </figure>
-            </a>
-            <a href="" class="news">관련 뉴스 보기</a>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>
-              </div>
-              <figcaption>
-                <a href="">
-                  투모로우바이투게더가 롤링스톤의 ‘올해의 앨범’에 선정되었습니다
-                </a>
-              </figcaption>
-            </figure>
-            </a>
-            <a href="" class="news">관련 뉴스 보기</a>
-          </li>
-        </ul>
-      </article>
-      <article class="recommend_playlist">
-        <h2><a href="">VIBE 추천 플레이리스트</a></h2>
-        <ul class="recommend_playlist_list">
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>  
-              </div>
-              <figcaption><a href="">하우스 파티</a></figcaption>
-            </figure>
-            <span>VIBE</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>  
-              </div>
-              <figcaption><a href="">LP펍에서</a></figcaption>
-            </figure>
-            <span>VIBE</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>  
-              </div>
-              <figcaption><a href="">가득 심쿵 사랑 노래</a></figcaption>
-            </figure>
-            <span>VIBE</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>  
-              </div>
-              <figcaption><a href="">최강 긍정왕</a></figcaption>
-            </figure>
-            <span>VIBE</span>
-          </li>
-          <li class="list_item">
-            <figure>
-              <div class="item_img">
-                <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
-                <div class="music_btns">
-                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
-                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
-                </div>  
-              </div>
-              <figcaption><a href="">차오르는 자신감</a></figcaption>
-            </figure>
-            <span>VIBE</span>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <footer class="footer">
-      <dl class="notice">
-        <dt><a href="">공지사항</a></dt>
-        <dd><a href="">VIBE 선곡 큐레이터와 함께 듣는 파티룸!</a></dd>
-      </dl>
-      <dl class="company_info">
-        <div>
-          <dt>네이버(주) 대표이사</dt>
-          <dd>한성숙</dd>
         </div>
-        <div>
-          <dt>사업자등록번호</dt>
-          <dd>220-81-62517</dd>
-        </div>
-        <div>
-          <dt>통신판매업신고번호</dt>
-          <dd>제2006-경기성남-0692호</dd>
-        </div>
-        <div>
-          <dt>주소</dt>
-          <dd>경기도 성남시 분당고 불정로 6 네이버 그린팩토리</dd>
-        </div>
-        <div>
-          <dt>대표전화</dt>
-          <dd>1588-3820</dd>
-        </div>
-        <div>
-          <dt>이메일</dt>
-          <dd><a>ccnaver@naver.com</a></dd>
-        </div>
-        <div>
-          <dt>호스팅 서비스 제공</dt>
-          <dd>NAVER Business Platform</dd>
-        </div>
-      </dl>
-      <div class="terms">
-        <ul class="terms_list">
-          <li><a href="">개인정보처리방침</a></li>
-          <li><a href="">네이버 이용약관</a></li>
-          <li><a href="">VIBE 이용약관</a></li>
-          <li><a href="">고객센터</a></li>
-          <li><a href="">결제/환불 안내</a></li>
-          <li><a href="">VIBE 스마트봇</a></li>
-          <li><a href="">톡톡상담</a></li>
-          <li><a href="">사업자정보 확인</a></li>
-          <li><a href=""><small>&copy; NAVER Corp.</small></a></li>
-        </ul>
-        <ul class="sns_list">
-          <li>
-            <a href="">
-              <i class="fab fa-facebook-square"><span>페이스북</span></i>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fab fa-instagram"><span>인스타그램</span></i>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-naver"><span>네이버</span></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <div class="now_playlist">
-      <div class="now_playlist_music">
-        <img src="http://placehold.it/50x50" alt="" class="toggle">
-        <dl> 
-          <dt>오늘 뭐 듣지?</dt>
-          <dd>재생 버튼을 클릭해보세요</dd>
+        <article class="magazine">
+          <h2><a href="#">매거진</a></h2>
+          <ul class="magazine_list">
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="http://placehold.it/320x100" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">1415의 시즌2</a>
+                </figcaption>
+              </figure>
+              <span>2021.12.08</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">New Release #70 : 에드시런, 엘튼 존</a>
+                </figcaption>
+              </figure>
+              <span>2021.12.06</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href=""> Billboard HOT 100 : 요정과 디바의 차트 고지전 </a>
+                </figcaption>
+              </figure>
+              <span>2021.12.02</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href=""> 장우혁, 변화와 불변 </a>
+                </figcaption>
+              </figure>
+              <span>2021.12.01</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href=""> Billboard HOT 100 : 요정과 디바의 차트 고지전 </a>
+                </figcaption>
+              </figure>
+              <span>2021.11.26</span>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>NEWS</h2>
+          <ul class="news_list">
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">
+                    임한별이 단독 콘서트 '크리스마스 시네마'를 개최합니다
+                  </a>
+                </figcaption>
+              </figure>
+              <a href="" class="news">관련 뉴스 보기</a>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">
+                    에스파의 ’Savage’가 빌보드 200에 재진입 하였습니다
+                  </a>
+                </figcaption>
+              </figure>
+              <a href="" class="news">관련 뉴스 보기</a>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">
+                    아이브의 ‘ELEVEN’이 빌보드 월드 디지털 송 차트에서 12위를
+                    차지하였습니다관련 플레이리스트 보기
+                  </a>
+                </figcaption>
+              </figure>
+              <a href="" class="news">관련 뉴스 보기</a>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">
+                    세븐틴이 ‘MTV 푸시’ 캠페인 12월의 아티스트로 선정되었습니다
+                  </a>
+                </figcaption>
+              </figure>
+              <a href="" class="news">관련 뉴스 보기</a>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption>
+                  <a href="">
+                    투모로우바이투게더가 롤링스톤의 ‘올해의 앨범’에
+                    선정되었습니다
+                  </a>
+                </figcaption>
+              </figure>
+              <a href="" class="news">관련 뉴스 보기</a>
+            </li>
+          </ul>
+        </article>
+        <article class="recommend_playlist">
+          <h2><a href="">VIBE 추천 플레이리스트</a></h2>
+          <ul class="recommend_playlist_list">
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption><a href="">하우스 파티</a></figcaption>
+              </figure>
+              <span>VIBE</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption><a href="">LP펍에서</a></figcaption>
+              </figure>
+              <span>VIBE</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption><a href="">가득 심쿵 사랑 노래</a></figcaption>
+              </figure>
+              <span>VIBE</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption><a href="">최강 긍정왕</a></figcaption>
+              </figure>
+              <span>VIBE</span>
+            </li>
+            <li class="list_item">
+              <figure>
+                <div class="item_img">
+                  <a href="">
+                    <img src="https://placeimg.com/200/100/any" alt="" />
+                  </a>
+                  <div class="music_btns">
+                    <button type="button" class="play_btn">
+                      <i class="fas fa-play-circle"><span>재생하기</span></i>
+                    </button>
+                    <button type="button" class="plus_btn">
+                      <i class="far fa-ellipsis-h"><span>더보기</span></i>
+                    </button>
+                  </div>
+                </div>
+                <figcaption><a href="">차오르는 자신감</a></figcaption>
+              </figure>
+              <span>VIBE</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <footer class="footer">
+        <dl class="notice">
+          <dt><a href="">공지사항</a></dt>
+          <dd><a href="">VIBE 선곡 큐레이터와 함께 듣는 파티룸!</a></dd>
         </dl>
-      </div>
-      <div class="playlist_button">
-        <button type="button" class="full">
-          <i class="fas fa-random"><span>랜덤 재생</span></i>
-        </button>
-        <button type="button">
-          <i class="fas fa-step-backward"><span>이전 곡</span></i>
-        </button>
-        <button type="button">
-          <i class="fas fa-play"><span>재생</span></i>
-        </button>
-        <button type="button">
-          <i class="fas fa-step-forward"><span>다음 곡</span></i>
-        </button>
-        <button type="button" class="full">
-          <i class="fas fa-sync"><span>반복 재생</span></i>
-        </button>
-      </div>
-      <div class="volume_now_playlist">
-        <label for="" class="toggle"><i class="fas fa-volume-down"><span>소리 조절</span></i></label>
-        <input type="range" class="toggle">
-        <button type="button"><i class="fas fa-list"><span>플레이리스트 보기</span></i></button>
+        <dl class="company_info">
+          <div>
+            <dt>네이버(주) 대표이사</dt>
+            <dd>한성숙</dd>
+          </div>
+          <div>
+            <dt>사업자등록번호</dt>
+            <dd>220-81-62517</dd>
+          </div>
+          <div>
+            <dt>통신판매업신고번호</dt>
+            <dd>제2006-경기성남-0692호</dd>
+          </div>
+          <div>
+            <dt>주소</dt>
+            <dd>경기도 성남시 분당고 불정로 6 네이버 그린팩토리</dd>
+          </div>
+          <div>
+            <dt>대표전화</dt>
+            <dd>1588-3820</dd>
+          </div>
+          <div>
+            <dt>이메일</dt>
+            <dd><a>ccnaver@naver.com</a></dd>
+          </div>
+          <div>
+            <dt>호스팅 서비스 제공</dt>
+            <dd>NAVER Business Platform</dd>
+          </div>
+        </dl>
+        <div class="terms">
+          <ul class="terms_list">
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">네이버 이용약관</a></li>
+            <li><a href="">VIBE 이용약관</a></li>
+            <li><a href="">고객센터</a></li>
+            <li><a href="">결제/환불 안내</a></li>
+            <li><a href="">VIBE 스마트봇</a></li>
+            <li><a href="">톡톡상담</a></li>
+            <li><a href="">사업자정보 확인</a></li>
+            <li>
+              <a href=""><small>&copy; NAVER Corp.</small></a>
+            </li>
+          </ul>
+          <ul class="sns_list">
+            <li>
+              <a href="">
+                <i class="fab fa-facebook-square"><span>페이스북</span></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-instagram"><span>인스타그램</span></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-naver"><span>네이버</span></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <div class="now_playlist">
+        <div class="now_playlist_music">
+          <img src="http://placehold.it/50x50" alt="" class="toggle" />
+          <dl>
+            <dt>오늘 뭐 듣지?</dt>
+            <dd>재생 버튼을 클릭해보세요</dd>
+          </dl>
+        </div>
+        <div class="playlist_button">
+          <button type="button" class="full">
+            <i class="fas fa-random"><span>랜덤 재생</span></i>
+          </button>
+          <button type="button">
+            <i class="fas fa-step-backward"><span>이전 곡</span></i>
+          </button>
+          <button type="button">
+            <i class="fas fa-play"><span>재생</span></i>
+          </button>
+          <button type="button">
+            <i class="fas fa-step-forward"><span>다음 곡</span></i>
+          </button>
+          <button type="button" class="full">
+            <i class="fas fa-sync"><span>반복 재생</span></i>
+          </button>
+        </div>
+        <div class="volume_now_playlist">
+          <label for="sound" class="toggle">
+            <i class="fas fa-volume-down"><span>소리 조절</span></i>
+          </label>
+          <input type="range" class="toggle" id="sound" />
+          <button type="button">
+            <i class="fas fa-list"><span>플레이리스트 보기</span></i>
+          </button>
+        </div>
       </div>
     </div>
-  </div> 
-</body>
+  </body>
 </html>
