@@ -76,34 +76,36 @@
         </button>
       </header>
       <section class="today">
-        <h2 class="util-hide">투데이</h2>
-        <div class="head item_img">
-          <a href="#">
-            <img src="https://placeimg.com/200/100/any" alt="" />
-          </a>
-          <div class="music_btns">
-            <button type="button" class="play_btn">
-              <i class="fas fa-play-circle"><span>재생하기</span></i>
-            </button>
-            <button type="button" class="plus_btn">
-              <i class="far fa-ellipsis-h"><span>더보기</span></i>
-            </button>
+        <h2 class="util_hide">투데이</h2>
+        <div class="head">
+          <div class="today_img">
+            <a href="#">
+              <img src="https://placeimg.com/200/100/any" alt="" />
+            </a>
+            <div class="music_btns">
+              <button type="button" class="play_btn">
+                <i class="fas fa-play-circle"><span>재생하기</span></i>
+              </button>
+              <button type="button" class="plus_btn">
+                <i class="far fa-ellipsis-h"><span>더보기</span></i>
+              </button>
+            </div>
           </div>
           <div class="head_info">
             <span class="genre">GENRE</span>
-            <p>New Release #70: 에드시런, 엘튼 존</p>
-            <p class="full">
+            <a href="">New Release #70: 에드시런, 엘튼 존</a>
+            <p class="middle_open">
               크리스마스 싱글을 발표한 에드 시런과 엘튼 존, 새 앨범을 발표한
               포레스텔라 조민규와 아이들...
             </p>
-            <div class="head_vibeMag full">
+            <div class="head_vibeMag middle_open">
               <span>VIBE MAG</span>
               <span>2021.12.06</span>
             </div>
           </div>
         </div>
         <article class="magazine">
-          <h2><a href="#">매거진</a></h2>
+          <h3><a href="#">매거진</a></h3>
           <ul class="magazine_list">
             <li class="list_item">
               <figure>
@@ -213,7 +215,7 @@
           </ul>
         </article>
         <article>
-          <h2>NEWS</h2>
+          <h3>NEWS</h3>
           <ul class="news_list">
             <li class="list_item">
               <figure>
@@ -335,7 +337,7 @@
           </ul>
         </article>
         <article class="recommend_playlist">
-          <h2><a href="">VIBE 추천 플레이리스트</a></h2>
+          <h3><a href="">VIBE 추천 플레이리스트</a></h3>
           <ul class="recommend_playlist_list">
             <li class="list_item">
               <figure>
@@ -512,7 +514,7 @@
           </dl>
         </div>
         <div class="playlist_button">
-          <button type="button" class="full">
+          <button type="button" class="full_open">
             <i class="fas fa-random"><span>랜덤 재생</span></i>
           </button>
           <button type="button">
@@ -524,15 +526,22 @@
           <button type="button">
             <i class="fas fa-step-forward"><span>다음 곡</span></i>
           </button>
-          <button type="button" class="full">
+          <button type="button" class="full_open">
             <i class="fas fa-sync"><span>반복 재생</span></i>
           </button>
         </div>
         <div class="volume_now_playlist">
-          <label for="sound" class="toggle">
+          <div class="timer full_open">
+            <span>00 : 00</span>
+            <span>/</span>
+            <span>00 : 00</span>
+          </div>
+          <div class="sound toggle">
             <i class="fas fa-volume-down"><span>소리 조절</span></i>
-          </label>
-          <input type="range" class="toggle" id="sound" />
+            <div class="progress_bar">
+              <div class="progress"></div>
+            </div>
+          </div>
           <button type="button">
             <i class="fas fa-list"><span>플레이리스트 보기</span></i>
           </button>

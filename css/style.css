@@ -20,17 +20,16 @@ button {
 }
 
 .util_hide {
+  display: inline-block;
   width: 0px;
   height: 0px;
   line-height: 0px;
   text-indent: -9999px;
 }
 
-.toggle {
-  display: none;
-}
-
-.full {
+.toggle,
+.middle_open,
+.full_open {
   display: none;
 }
 
@@ -51,7 +50,7 @@ button i {
   font-size: 20px;
 }
 
-button i span {
+i span {
   display: inline-block;
   text-indent: -9999px;
 }
@@ -199,31 +198,31 @@ button i span {
 }
 
 /* 투데이 */
-.today {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-.today article {
+section > article {
   padding: 20px;
 }
+
 /* 헤드 */
 .head {
   position: relative;
 }
 
-.head.item_img img {
+.today_img img {
   width: 100%;
   object-fit: cover;
 }
 
 .head:hover .music_btns {
+  display: flex;
   justify-content: flex-end;
   gap: 5px;
+  z-index: 10;
 }
 
 .head_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   margin: 20px;
 }
 
@@ -235,7 +234,8 @@ button i span {
   background: #7e00e4;
 }
 
-.head_info p {
+.head_info a {
+  display: block;
   font-size: 24px;
   font-weight: 600;
   width: 60%;
@@ -243,24 +243,14 @@ button i span {
   line-height: 30px;
 }
 
-.today .head .head_info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.head_info p:hover {
-  text-decoration: underline;
-}
-
 /* 매거진 */
-.today h2 {
+.today h3 {
   font-size: 24px;
   font-weight: 600;
   line-height: 50px;
 }
 
-.today h2 a::after {
+.today h3 a::after {
   display: inline-block;
   content: ">";
   height: 20px;
@@ -358,9 +348,6 @@ button i span {
   padding: 20px 0;
   border-top: 0.1px solid #222;
   border-bottom: 0.5px solid #222;
-}
-
-.company_info {
   font-size: 14px;
 }
 
@@ -382,7 +369,7 @@ button i span {
   justify-content: center;
   flex-wrap: wrap;
   margin: 20px auto;
-  width: 75%;
+  width: 400px;
   line-height: 25px;
   gap: 0 10px;
 }
@@ -421,20 +408,22 @@ button i span {
   align-items: center;
 }
 
+.now_playlist_music {
+  width: 30%;
+}
+
 .now_playlist dt {
   font-weight: 600;
 }
 
 .now_playlist dd {
+  display: block;
+  width: 100%;
   color: #444;
   margin-top: 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.now_playlist_music {
-  width: 30%;
 }
 
 .now_playlist_music,
@@ -589,6 +578,151 @@ button i span {
     margin-top: 20px;
     border: 1px solid #333;
     box-sizing: border-box;
+  }
+
+  .now_playlist {
+    width: 100%;
+  }
+
+  .fa-volume-down {
+    font-size: 18px;
+  }
+
+  .progress_bar {
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+    background: #fff;
+  }
+
+  .progress {
+    width: 30%;
+    height: 100%;
+    background: #aaa;
+  }
+}
+
+@media screen and (min-width: 948px) {
+  .middle_open {
+    display: block;
+  }
+
+  .wrapper > section {
+    margin-top: 0;
+    padding: 0 30px;
+  }
+
+  .head {
+    display: flex;
+    height: 250px;
+    background: #aaa;
+  }
+
+  .today_img {
+    max-width: 400px;
+  }
+
+  .today_img img {
+    height: 100%;
+  }
+
+  .head_info {
+    position: initial;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .head:hover .music_btns {
+    display: none;
+  }
+
+  .head_info a {
+    width: 80%;
+  }
+
+  .head_info p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+  }
+
+  section > article {
+    padding: 30px 0;
+  }
+
+  .wrapper > .footer {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .full_open {
+    display: block;
+  }
+
+  .wrapper > * {
+    width: calc(100% - 270px);
+  }
+
+  .wrapper > section {
+    margin-top: 0;
+    padding: 0 50px;
+  }
+
+  .header {
+    width: 270px;
+  }
+
+  .head {
+    height: 350px;
+  }
+
+  .today_img {
+    max-width: 500px;
+  }
+
+  .wrapper > .footer {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  .company_info div {
+    display: inline-block;
+  }
+
+  .terms_list {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sns_list {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+  }
+
+  .playlist_button button {
+    margin-right: 5px;
+  }
+
+  .fa-random,
+  .fa-sync {
+    font-size: 12px;
+  }
+
+  .fa-random:hover,
+  .fa-sync:hover {
+    font-size: 14px;
+  }
+
+  .timer {
+    font-size: 12px;
   }
 
   .now_playlist {
