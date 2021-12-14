@@ -7,33 +7,34 @@
   <title>VIBE Clone</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
   <div class="wrapper">
-    <div class="menu">
-      <h2 class="util_hide">Menu</h2>
-      <div class="menu_head">
+    <header class="header">
+      <div class="header_wrapper">
         <div class="logo">
           <a href="">NAVER <span>VIBE</span></a> 
         </div>
-        <a href="" class="login">
-          <img src="" alt="로그인 이미지">
-          로그인
-        </a>
         <div class="menu_button">
-          <input type="search" placeholder="VIBE 검색">
-          <button type="button">Search</button>
-          <button type="button">Menu Button</button>
+          <button type="button"><i class="fas fa-search"><span>Search</span></i></button>
+          <button type="button" class="menu_toggle"><i class="fas fa-bars"><span>Menu Button</span></i></button>
         </div>
       </div>
       <div class="navigation">
+        <button type="button" class="close_btn"><i class="fas fa-times"><span>닫기</span></i></button>
+        <a href="" class="login">
+          <img src="http://placehold.it/50x50" alt="로그인 이미지">
+          <span>로그인</span>
+        </a>
+        <input type="search" placeholder="VIBE 검색">
         <ul class="gnb">
-          <li><a href="">투데이</a></li>
-          <li><a href="">차트</a></li>
-          <li><a href="">최신앨범</a></li>
-          <li><a href="">DJ 스테이션</a></li>
-          <li><a href="">VIBE MAG</a></li>
-          <li><a href="">이달의 노래</a></li>
+          <li><a href=""><i class="fas fa-home"></i>투데이</a></li>
+          <li><a href=""><i class="fas fa-trophy"></i>차트</a></li>
+          <li><a href=""><i class="fas fa-star-of-david"></i>최신앨범</a></li>
+          <li><a href=""><i class="fas fa-compact-disc"></i>DJ 스테이션</a></li>
+          <li><a href=""><i class="fas fa-newspaper"></i>VIBE MAG</a></li>
+          <li><a href=""><i class="fas fa-calendar-week"></i>이달의 노래</a></li>
         </ul>
         <ul class="vibe_promotion">
           <li><a href="">#내돈내듣</a></li>
@@ -46,17 +47,21 @@
           <li><a href="">커밍쑨 VIBE</a></li>
         </ul>
       </div>
-      <button type="button" class="toggle">데스크톱앱 설치</button>
-    </div>
+      <button type="button" class="desktop_btn toggle">데스크톱앱 설치</button>
+    </header>
     <section class="today">
-      <div class="head">
+      <div class="head item_img">
         <a href="#">
           <img src="https://placeimg.com/200/100/any" alt="">
+          <div class="music_btns">
+            <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+            <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
+          </div>
           <div class="head_info">
             <span class="genre">GENRE</span>
             <p>New Release #70: 에드시런, 엘튼 존</p>
-            <p class="toggle">크리스마스 싱글을 발표한 에드 시런과 엘튼 존, 새 앨범을 발표한 포레스텔라 조민규와 아이들...</p>
-            <div class="head_vibeMag toggle">
+            <p class="full">크리스마스 싱글을 발표한 에드 시런과 엘튼 존, 새 앨범을 발표한 포레스텔라 조민규와 아이들...</p>
+            <div class="head_vibeMag full">
               <span>VIBE MAG</span>
               <span>2021.12.06</span>
             </div>
@@ -71,8 +76,8 @@
               <div class="item_img">
                 <a href=""><img src="http://placehold.it/320x100" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -86,8 +91,8 @@
               <div class="item_img">
                 <a href=""><a href=""><img src="https://placeimg.com/200/100/any" alt=""></a></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -101,8 +106,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -119,8 +124,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -137,8 +142,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -160,8 +165,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -178,8 +183,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -196,8 +201,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -214,8 +219,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -232,8 +237,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>
               </div>
               <figcaption>
@@ -255,8 +260,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>  
               </div>
               <figcaption><a href="">하우스 파티</a></figcaption>
@@ -268,8 +273,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>  
               </div>
               <figcaption><a href="">LP펍에서</a></figcaption>
@@ -281,8 +286,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>  
               </div>
               <figcaption><a href="">가득 심쿵 사랑 노래</a></figcaption>
@@ -294,8 +299,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>  
               </div>
               <figcaption><a href="">최강 긍정왕</a></figcaption>
@@ -307,8 +312,8 @@
               <div class="item_img">
                 <a href=""><img src="https://placeimg.com/200/100/any" alt=""></a>
                 <div class="music_btns">
-                  <button class="play_btn">재생하기</button>
-                  <button class="plus_btn">더보기</button>
+                  <button class="play_btn"><i class="fas fa-play-circle"><span>재생하기</span></i></button>
+                  <button class="plus_btn"><i class="far fa-ellipsis-h"><span>더보기</span></i></button>
                 </div>  
               </div>
               <figcaption><a href="">차오르는 자신감</a></figcaption>
@@ -368,52 +373,52 @@
         <ul class="sns_list">
           <li>
             <a href="">
-              <img src="" alt="페이스북">
+              <i class="fab fa-facebook-square"><span>페이스북</span></i>
             </a>
           </li>
           <li>
             <a href="">
-              <img src="" alt="인스타그램">
+              <i class="fab fa-instagram"><span>인스타그램</span></i>
             </a>
           </li>
           <li>
             <a href="">
-              <img src="" alt="네이버">
+              <i class="fa-naver"><span>네이버</span></i>
             </a>
           </li>
         </ul>
       </div>
     </footer>
-  </div> 
-  <div class="now_playlist">
-    <div class="now_playlist_music">
-      <img src="" alt="">
-      <dl>
-        <dt>오늘 뭐 듣지?</dt>
-        <dd>재생 버튼을 클릭해보세요</dd>
-      </dl>
-    </div>
-    <div class="playlist_button">
-      <button type="button">
-        <img src="" alt="반복재생">
-      </button>
-      <button type="button">
-        <img src="" alt="이전 노래">
-      </button>
-      <button type="button">
-        <img src="" alt="재생">
-      </button>
-      <button type="button">
-        <img src="" alt="다음 노래">
-      </button>
-      <button type="button">
-        <img src="" alt="무작위 재생">
-      </button>
-    </div>
-    <div class="volume_now_playlist">
-      <label for="">소리크기</label>
-      <input type="range">
-      <button type="button">플레이리스트 보기</button>
+    <div class="now_playlist">
+      <div class="now_playlist_music">
+        <img src="http://placehold.it/50x50" alt="" class="toggle">
+        <dl> 
+          <dt>오늘 뭐 듣지?</dt>
+          <dd>재생 버튼을 클릭해보세요</dd>
+        </dl>
+      </div>
+      <div class="playlist_button">
+        <button type="button" class="full">
+          <i class="fas fa-random"><span>랜덤 재생</span></i>
+        </button>
+        <button type="button">
+          <i class="fas fa-step-backward"><span>이전 곡</span></i>
+        </button>
+        <button type="button">
+          <i class="fas fa-play"><span>재생</span></i>
+        </button>
+        <button type="button">
+          <i class="fas fa-step-forward"><span>다음 곡</span></i>
+        </button>
+        <button type="button" class="full">
+          <i class="fas fa-sync"><span>반복 재생</span></i>
+        </button>
+      </div>
+      <div class="volume_now_playlist">
+        <label for="" class="toggle"><i class="fas fa-volume-down"><span>소리 조절</span></i></label>
+        <input type="range" class="toggle">
+        <button type="button"><i class="fas fa-list"><span>플레이리스트 보기</span></i></button>
+      </div>
     </div>
   </div> 
 </body>
