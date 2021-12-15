@@ -418,12 +418,11 @@ section > article {
 
 .now_playlist dd {
   display: block;
-  width: 100%;
   color: #444;
-  margin-top: 5px;
-  overflow: hidden;
+  margin-top: 10px;
+  /* overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
 }
 
 .now_playlist_music,
@@ -507,6 +506,7 @@ section > article {
     position: initial;
     padding-right: 20px;
     margin-top: 10px;
+    padding-left: 5px;
     overflow: hidden;
   }
 
@@ -543,7 +543,7 @@ section > article {
     background: #555;
     border: none;
     padding: 5px 10px;
-    width: 100%;
+    width: 90%;
     border-radius: 2px;
     font-size: 20px;
   }
@@ -554,7 +554,7 @@ section > article {
 
   .navigation ul {
     display: block;
-    margin-left: 0px;
+    margin: 0px;
     padding: 20px 0;
   }
 
