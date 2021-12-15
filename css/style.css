@@ -35,7 +35,6 @@ button {
 
 ul {
   display: flex;
-  overflow: hidden;
 }
 
 a:hover {
@@ -88,7 +87,7 @@ i span {
   padding: 0 20px;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   background: #000;
 }
 
@@ -258,6 +257,30 @@ section > article {
   font-weight: 100;
 }
 
+.slide {
+  position: relative;
+}
+
+.prev_btn,
+.next_btn {
+  position: absolute;
+  z-index: 10;
+}
+
+.prev_btn i,
+.next_btn i {
+  font-size: 32px;
+  color: #000;
+}
+
+.next_btn {
+  right: 0;
+}
+
+ul[class$="list"] {
+  transition: transform 0.5s;
+}
+
 .list_item {
   margin-right: 10px;
 }
@@ -276,7 +299,7 @@ section > article {
 }
 
 .list_item span,
-.news {
+.more_news {
   color: #999999;
 }
 
@@ -406,6 +429,7 @@ section > article {
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
+  z-index: 20;
 }
 
 .now_playlist_music {
