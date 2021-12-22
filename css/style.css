@@ -429,7 +429,7 @@ ul[class$="list"] {
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
-  z-index: 20;
+  z-index: 10;
 }
 
 .now_playlist_music {
