@@ -1,4 +1,58 @@
 const slides = document.querySelectorAll(".slide");
+let timeout;
+
+function showButtons() {
+  slides.forEach((slide) => {
+    const imgs = slide.querySelectorAll(".item_img");
+    const slideRect = slide.getBoundingClientRect();
+    const slideLeft = slideRect.left;
+    const slideRight = slideRect.right;
+
+    const firstImgRect = imgs[0].getBoundingClientRect();
+    const firstImgLeft = firstImgRect.left;
+    const lastImgRect = imgs[imgs.length - 1].getBoundingClientRect();
+    const lastImgRight = lastImgRect.right;
+
+    const prevBtn = slide.querySelector(".prev_btn");
+    const nextBtn = slide.querySelector(".next_btn");
+    const halfImgHeight = firstImgRect.height / 2;
+
+    // 이전 버튼
+    if (Math.ceil(firstImgLeft) < slideLeft) {
+      prevBtn.style.display = "block";
+      const prevBtnHeight = prevBtn.getBoundingClientRect().height;
+      const halfPrevBtn = prevBtnHeight / 2;
+      prevBtn.style.transform = `translateY(${halfImgHeight - halfPrevBtn}px)`;
+    } else {
+      prevBtn.style.display = "none";
+    }
+
+    // 다음 버튼
+    if (Math.floor(lastImgRight) > slideRight) {
+      nextBtn.style.display = "block";
+      const nextBtnHeight = nextBtn.getBoundingClientRect().height;
+      const halfNextBtn = nextBtnHeight / 2;
+      nextBtn.style.transform = `translateY(${halfImgHeight - halfNextBtn}px)`;
+    } else {
+      nextBtn.style.display = "none";
+    }
+  });
+}
+
+function moveSlideList(slideList, move) {
+  if (slideList.style.transform === "") {
+    slideList.style.transform = `translateX(${-move}px)`;
+  } else {
+    const transformStyle = slideList.style.transform;
+    slideList.style.transform = transformStyle + `translateX(${-move}px)`;
+  }
+
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  timeout = setTimeout(() => showButtons(), 200);
+}
+
 function slideMoveLeft(e) {
   const bubble = e.composedPath();
   const prevBtn = bubble.filter((el) =>
@@ -7,8 +61,7 @@ function slideMoveLeft(e) {
   const slide = prevBtn.parentElement;
   const slideRect = slide.getBoundingClientRect();
   const slideRectLeft = slideRect.left;
-
-  const slideList = slide.querySelector("ul");
+  const slideList = slide.querySelector("ul[class$='list']");
 
   let move = 0;
   const imgRightArr = [];
@@ -16,7 +69,6 @@ function slideMoveLeft(e) {
   const firstImgRect = firstImg.getBoundingClientRect();
   const firstImgRight = firstImgRect.right;
   const firstImgLeft = firstImgRect.left;
-
   const imgs = slideList.querySelectorAll(".list_item");
 
   imgs.forEach((img) => imgRightArr.push(img.getBoundingClientRect().right));
@@ -25,27 +77,15 @@ function slideMoveLeft(e) {
   );
 
   if (firstImgRight < slideRectLeft) {
-    console.log(2, firstImgLeft, firstImgRight, firstImg);
     move = slideRect.width - filterArr[0];
-
     if (move >= -firstImgLeft) {
-      console.log(3);
       move = -firstImgLeft + slideRectLeft;
-      console.log(move);
     }
   } else {
-    move = -firstImgLeft + 20;
+    move = -firstImgLeft + slideRectLeft;
   }
 
-  if (slideList.style.transform === "") {
-    slideList.style.transform = `translateX(${move}px)`;
-  } else {
-    const transformStyle = slideList.style.transform;
-    slideList.style.transform = transformStyle + `translateX(${move}px)`;
-  }
-  setTimeout(() => {
-    showButtons();
-  }, 500);
+  moveSlideList(slideList, -move);
 }
 
 function slideMoveRight(e) {
@@ -53,10 +93,11 @@ function slideMoveRight(e) {
   const nextBtn = bubble.filter((el) =>
     el.tagName === "BUTTON" ? el : null
   )[0];
+
   const slide = nextBtn.parentElement;
   const slideRect = slide.getBoundingClientRect();
   const slideRectRight = slideRect.right;
-  const slideList = slide.querySelector("ul");
+  const slideList = slide.querySelector("ul[class$='list']");
 
   let move = 0;
   const imgLeftArr = [];
@@ -70,64 +111,14 @@ function slideMoveRight(e) {
   const filterArr = imgLeftArr.filter((el) => el < slideRectRight);
 
   if (lastImgLeft > slideRectRight) {
-    console.log(2);
     move = filterArr[filterArr.length - 1];
     if (lastImgLeft - move <= slideRectRight) {
       move = lastImgRight - slideRectRight;
     }
   } else {
-    console.log(1);
-    move = lastImgRight - slideRectRight + 20;
+    move = lastImgRight - slideRectRight;
   }
-
-  if (slideList.style.transform === "") {
-    slideList.style.transform = `translateX(${-move}px)`;
-  } else {
-    const transformStyle = slideList.style.transform;
-    slideList.style.transform = transformStyle + `translateX(${-move}px)`;
-  }
-
-  setTimeout(() => {
-    showButtons();
-  }, 500);
-}
-
-function showButtons() {
-  slides.forEach((slide) => {
-    const imgs = slide.querySelectorAll(".item_img");
-    const slideRect = slide.getBoundingClientRect();
-
-    // 이전 버튼
-    const firstImgRect = imgs[0].getBoundingClientRect();
-    const firstImgLeft = firstImgRect.left;
-    const prevBtn = slide.querySelector(".prev_btn");
-    const halfImgHeight = firstImgRect.height / 2;
-    const slideLeft = slideRect.left;
-    if (Math.ceil(firstImgLeft) < slideLeft) {
-      prevBtn.style.display = "block";
-    } else {
-      prevBtn.style.display = "none";
-    }
-
-    const prevBtnHeight = prevBtn.getBoundingClientRect().height;
-    const halfPrevBtn = prevBtnHeight / 2;
-    prevBtn.style.transform = `translateY(${halfImgHeight - halfPrevBtn}px)`;
-
-    // 다음 버튼
-    const lastImgRect = imgs[imgs.length - 1].getBoundingClientRect();
-    const lastImgRight = lastImgRect.right;
-    const slideRight = slideRect.right;
-    const nextBtn = slide.querySelector(".next_btn");
-
-    if (Math.floor(lastImgRight) > slideRight) {
-      nextBtn.style.display = "block";
-    } else {
-      nextBtn.style.display = "none";
-    }
-    const nextBtnHeight = nextBtn.getBoundingClientRect().height;
-    const halfNextBtn = nextBtnHeight / 2;
-    nextBtn.style.transform = `translateY(${halfImgHeight - halfNextBtn}px)`;
-  });
+  moveSlideList(slideList, move);
 }
 
 showButtons();

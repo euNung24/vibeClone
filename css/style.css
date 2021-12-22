@@ -278,7 +278,7 @@ section > article {
 }
 
 ul[class$="list"] {
-  transition: transform 0.5s;
+  transition: transform 0.2s;
 }
 
 .list_item {
