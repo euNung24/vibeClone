@@ -27,7 +27,7 @@ button {
   text-indent: -9999px;
 }
 
-.toggle,
+.small_open,
 .middle_open,
 .full_open {
   display: none;
@@ -78,7 +78,8 @@ i span {
 /* 모바일 버전 */
 .wrapper {
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .header {
@@ -432,10 +433,6 @@ ul[class$="list"] {
   z-index: 10;
 }
 
-.now_playlist_music {
-  width: 30%;
-}
-
 .now_playlist dt {
   font-weight: 600;
 }
@@ -444,9 +441,9 @@ ul[class$="list"] {
   display: block;
   color: #444;
   margin-top: 10px;
-  /* overflow: hidden;
+  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
 }
 
 .now_playlist_music,
@@ -455,6 +452,14 @@ ul[class$="list"] {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.now_playlist_music {
+  max-width: 30%;
+}
+
+.now_playlist_music dl {
+  width: 100%;
 }
 
 .playlist_button button {
@@ -497,7 +502,7 @@ ul[class$="list"] {
 
 /* 태블릿 */
 @media screen and (min-width: 768px) {
-  .toggle {
+  .small_open {
     display: block;
   }
 

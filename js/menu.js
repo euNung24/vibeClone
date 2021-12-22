@@ -5,9 +5,9 @@ const navigation = document.querySelector(".navigation");
 
 menuBtn.addEventListener("click", () => {
   navigation.classList.add("open");
-  wrapper.style.overflow = "hidden";
+  wrapper.style.overflowY = "hidden";
 });
 closeBtn.addEventListener("click", () => {
   navigation.classList.remove("open");
-  wrapper.style.overflow = "scroll";
+  wrapper.style.overflowY = "scroll";
 });
